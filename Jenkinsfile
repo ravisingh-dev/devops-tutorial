@@ -1,5 +1,9 @@
 pipeline {
-    agent { label 'docker-alpine-agents' }
+    agent { 
+        node{
+           label 'docker-alpine-agents' 
+        }
+    }  
 
     stages {
         stage('Clone repository') {
