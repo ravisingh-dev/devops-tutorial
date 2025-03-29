@@ -1,5 +1,9 @@
-node {
-    def app
+pipeline {
+    agent { 
+        node {
+            label 'docker-alpine-agents'
+        }
+    }
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
